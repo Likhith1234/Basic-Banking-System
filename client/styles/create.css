@@ -1,0 +1,86 @@
+.msg {
+    color: green;
+    font: 500 large 'Segoe Ui';
+    visibility: hidden;
+    padding: 1em;
+}
+
+.msg::before, .msg::after {
+    content: "!!!";
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 570px;
+    background-color: rgb(37, 150, 190);
+}
+
+.card {
+    width: 35%;
+    height: 25em;
+    border-radius: .3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border: .1em solid rgb(235, 207, 207);
+    box-shadow: 0 0 1em lightskyblue;
+}
+
+.card > h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: orangered;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fields {
+    width: 70%;
+    margin: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fields > label, .create-btn {
+    font: 900 large 'Times New Roman';
+}
+
+.inputs {
+    padding: .4em;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    width: 70%;
+}
+
+.inputs:focus {
+    background-color: lightskyblue;
+    border-bottom: 2px solid black;
+    border-radius: .3em;
+}
+
+.create-btn {
+    padding: .5em;
+    border: none;
+    width: 70%;
+    background-color: cornflowerblue;
+    border-radius: .2em;
+}
+
+.create-btn:hover {
+    cursor: pointer;
+    background-color: rgb(23, 95, 228);
+    color: white;
+}

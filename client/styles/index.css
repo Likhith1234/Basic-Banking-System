@@ -1,0 +1,154 @@
+/* common code for navbar (start) */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    background-color: lightblue;
+    height: 3em;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 25%;
+    padding: 1em;
+    color: orangered;
+}
+
+.navbar {
+    width: 50%;
+    list-style: none;
+    height: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+.nav-links {
+    text-decoration: none;
+    font: 700 large 'Segoe Ui';
+}
+
+.nav-links:hover {
+    text-shadow: .2em .2em cadetblue;
+}
+
+.ham {
+    display: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 2em;
+}
+
+.ham:hover {
+    cursor: pointer;
+    transform: scale(0.9, 0.9);
+}
+
+.ham > div {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+/* common code for navbar (end) */
+
+.home {
+    background-image: url("/client/images/home.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 539px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home > h2 {
+    font: 600 xx-large 'Times New Roman';
+}
+
+.home > h2 > strong {
+    color: orangered;
+}
+
+.landing-card {
+    width: 60%;
+    margin: 5em;
+    /* background-color: palegreen; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons {
+    padding: 1em;
+    border-radius: .6em;
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    color: beige;
+    text-decoration: none;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    background-color: orangered;
+    transform: scale(1.1, 1.1);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+footer > p {
+    margin: .5em;
+}
+
+@media screen and (max-width:1040px) {
+    .ham {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+    header {
+        height: 5em;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .landing-card {
+        width: 80%;
+    }
+
+    .buttons {
+        font-size: larger;
+    }
+}

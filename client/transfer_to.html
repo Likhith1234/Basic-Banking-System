@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>GRIPBank</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/index.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/create.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/transfer.css'>
+</head>
+<body>
+    <style>
+        .container {
+            background-color: white;
+            position: relative;
+        }
+
+        .container > h2:nth-child(1) {
+            position: absolute;
+            top: 0;
+        }
+
+        table {
+            margin-bottom: 2em;
+        }
+
+        .form {
+            width: 40%;
+        }
+
+        .inputs {
+            font: 600 medium 'Times New Roman';
+        }
+    </style>
+    <header>
+        
+    </header>
+    <div class="container">
+        <h2>Transaction From</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+
+        <h2>Transaction To</h2>
+
+        <form class="form" onsubmit="transferMoney(event)">
+            <div class="fields">
+                <label for="to">To: </label>
+                <select class="inputs" name="To" id="to" required>
+    
+                </select>    
+            </div>
+            <div class="fields">
+                <label for="amount">Amount: </label>
+                <input class="inputs" type="number" name="amount" id="amount" min="1" required />
+            </div>
+            <input class="btn" type="submit" value="Transfer">
+        </form>
+        <div class="msg"></div>
+    </div>
+
+    <script src="./imports/imports.js"></script>
+    <script src="./js/transfer_to.js"></script>
+</body>
+</html>
